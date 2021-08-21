@@ -12,7 +12,9 @@ client.once('ready', () =>{
       .catch(console.error);
 });
 
-const { prefix, token } = require ('./config.json');
+const token = process.env.TOKEN;
+const prefix = process.env.PREFIX;
+
 
 
 const commandsFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
