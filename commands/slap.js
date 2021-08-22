@@ -14,7 +14,7 @@ module.exports = {
         ]
 
 
-        personslapped = message.mentions.users.first()
+         const personslapped = message.mentions.users.first()
         let slapEmbed = new Discord.MessageEmbed()
         .setTitle(`${message.author.username} slaps ${personslapped.username} *Ouch*`)
         .setImage(images[Math. floor(Math. random()*images. length)])

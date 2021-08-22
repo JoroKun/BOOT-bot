@@ -6,18 +6,8 @@ module.exports = {
     execute(message) {
         const target = message.mentions.users.first() || message.author;
         const member = message.guild.members.cache.get(target.id)
-
-        let status;
-        switch (target.presense.status) {
-            case "online":
-                status = "Online <:code_academy_veteran:842994594328870932>"
-            case "dnd":
-                status = "Do Not Disturb <:no:863129932544606258>"
-            case "idle": 
-                status = "IDLE <:linux:857179176464416768>"
-
-    
-        }
+       
+        
         
 
         const embed = new Discord.MessageEmbed()

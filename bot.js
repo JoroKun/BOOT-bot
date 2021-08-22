@@ -2,10 +2,11 @@
 const fs = require("fs");
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const keepAlive = require('./server.js');
 client.commands = new Discord.Collection();
 
 client.once('ready', () =>{
-    console.log('Kuro is online');
+    console.log('BOOT complete');
 
     client.user.setPresence({ activity: { name: 'Over Looking For Someone', type: 'WATCHING'}, status: 'online' })
       .then(console.log)
@@ -37,5 +38,5 @@ client.on('message', message =>{
 
 });
 
-
+keepAlive();
 client.login(token);
